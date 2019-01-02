@@ -1,0 +1,32 @@
+body {
+    max-width: 40em;
+    margin: auto;
+}
+
+.message span {
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    max-width: 50%;
+    background-color: lightgrey;
+    }
+    
+.urzh span{
+    background-color: aquamarine;
+    border-color: aquamarine;
+}
+.den {
+    text-align: right;
+}
+
+.traduction {
+    font-style: italic;
+}
+
+#enank {
+    width: 100%;
+    border-radius: 4px;
+    font-size: 120%;
+}
+a:visited {
+    color: blue;
+}
