@@ -30,3 +30,7 @@ body {
 a:visited {
     color: blue;
 }
+#liammou_geriou {
+    display: flex;
+    justify-content: space-between;
+}
