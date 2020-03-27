@@ -1,0 +1,30 @@
+a:visited {
+    color: blue;
+}
+a:hover {
+    text-decoration-line: none;
+}
+.supprimer, .modifier {
+    text-align: right;
+    cursor: pointer;
+}
+.supprimer:hover, .modifier:hover {
+    color: black;
+}
+.divlien {
+    width: 100%;
+    color: white;
+}
+.divlien:hover {
+    color: rgba(0, 0, 0, 0.22);
+}
+#liens {
+    width: 100%;
+}
+input {
+    margin: 1px;
+}
+#montrer {
+    padding: 0px 3px;
+    font-size: 1.3em;
+}

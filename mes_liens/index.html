@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mes liens</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="liens_editable_utilisateur.css" />
+    </head>
+    <body>
+        <div id="liens"></div>
+        <button id="montrer">+</button>
+        <div id="ajout" style="display: none;">
+			<label for="titre">Titre :</label><input type="text" name="titre" id="titre" placeholder="Ex: W3C" /><br />
+			<label for="url">Url : (veuillez préciser le protocole)</label><input type="url" name="url" id="url" placeholder="Ex: https://w3.org" /><br />
+			<label for="classe">Classe :</label><input type="text" name="classe" id="classe" placeholder="Ex: programmation" /><br />
+			<input type="checkbox" name="onglet" id="onglet" /><label for="onglet">Toujours ouvrir dans un nouvel onglet</label><br />
+			<input type="submit" id="submit" value="Enregistrer" />
+			<button id="annul_modif" style="display: none">Annuler</button>
+			<button id="supprimer_pendant_modif" style="display: none">Supprimer</button>
+		</div>
+
+        <script src="pouchdb.js"></script>
+        <script type="text/javascript" src="liens_editable_utilisateur.js"></script>
+    </body>
+</html>
