@@ -36,6 +36,8 @@ let divliens = document.getElementById('liens'),
     divAjout = document.getElementById('ajout'),
     hrs = [],
     modifEnCours = false,
+    exportasjson = document.getElementById('export'),
+    importfromjson = document.getElementById('import'),
     idLienModif;
 
 function uuidv4() {
@@ -43,6 +45,19 @@ function uuidv4() {
     var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
     return v.toString(16);
   });
+}
+
+let downloadDatafile = (data_func, filename, mimetype) => {
+	const a = document.createElement('a');
+	document.body.appendChild(a);
+	const url = URL.createObjectURL(new Blob([ data_func() ], {type: mimetype || "text/plain"}));
+	a.href = url;
+	a.download = filename;
+	a.click();
+	setTimeout(() => {
+		window.URL.revokeObjectURL(url);
+		document.body.removeChild(a);
+	}, 0);
 }
 
 function ecrire_un_lien (id, nom, url, nouvel_onglet, classe){
@@ -224,6 +239,67 @@ submitButton.addEventListener('click', function (){
 			document.getElementById('classe').value,
 			document.getElementById('onglet').checked);
 	}
+});
+
+exportasjson.addEventListener('click', function (e) {
+    downloadDatafile(() => JSON.stringify(liens), `liens-${(new Date()).toISOString()}.json`, 'application/json');
+});
+
+importfromjson.addEventListener('click', function (e) {
+	function info (text) {
+	    let info = document.createElement('div');
+		info.textContent = text;
+		info.style = `
+			position: absolute;
+			top: 30px;
+			text-align: center;
+			width: 100%;
+			background-color: #6eb1e180;
+		`;
+		document.body.appendChild(info)
+		setTimeout(() => info.remove(), 10000);
+	}
+	let importfileinput = document.createElement('input');
+	importfileinput.type = 'file';
+	importfileinput.accept = 'application/json';
+	importfileinput.style.visibility = 'hidden';
+	importfileinput.addEventListener('change', function (e) {
+		let file = importfileinput.files[0];
+		if (file.type !== 'application/json') {
+			info('Veuillez choisir un fichier JSON valide.');
+		} else {
+			let new_links;
+		    importfileinput.files[0].text().then((v) =>  {
+		    	try {
+		    	    new_links = JSON.parse(v);
+		    	} catch {
+		    		info('Veuillez choisir un fichier JSON valide.');
+		    		return;
+		    	}
+				if (! Array.isArray(new_links)) {
+					info('Veuillez choisir un export JSON de cette page web.');
+				} else {
+		        	new_links.forEach((link) => {
+		        		if (!(link.nom && link.url && link.classe && link.nouvel_onglet !== undefined && link._id)) {
+		        			info('Veuillez choisir un export JSON de cette page web.');
+		        			return;
+		        		} else {
+		        			if (! ids.includes(link._id)) {
+		        				link._id = uuidv4();
+		        				delete link._rev;
+								liens.push(link);
+								db.put(link);
+								ecrire_les_liens();
+		        			}
+		        		}
+		        	});
+		        }
+		    });
+		}
+        importfileinput.remove();
+	});
+	document.body.appendChild(importfileinput);
+	importfileinput.click();
 });
 
 buttonMontrer.addEventListener('click', function(e){
