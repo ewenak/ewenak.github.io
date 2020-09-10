@@ -1,20 +1,14 @@
-aminañ ar ouel: sevel ar ouel
-a-vil-vern: kalz, niverus tre
-araj: fulor, nerzh, kounnar pe poan bras
-anken: strafuilhet gant udb
-Bilzig: lesanv brudetañ evit ar c'hizier
-birvilh: tomm berv (an dour a verv da 100 derez Kelsius)
-drag: roued pesketañ stank
-eoriañ: bannet eo bet an eor
-goz: loen dall a vev dindan douar
-grelink: roued pesketañ
-hunegon-menez: "marmotte"
-harink: pesk mor tost d'ar sardin ("hareng")
-kouronkañ: mont da neuial
-karreg: ur roc'h (mein bras er mor)
-klodad: hollad re vihan ur barez pe bandennad pesked o vont a gevred
-krignet: debret betek an askorn
-listenn: aspled war c'horre ar bigi (pont) pe kael-gelc'hieg pe karrezeneg a vez lakaet ur c'hrouaur, ur babig enni
-neuñv: mont war neuñv pe neuial
-splujañ: neuial dindan vor
-
+aezhenn: un avel bihan
+boulouz: danvez lien a servij da sevel brageier pe chupennoù
+chouket: krommet en he dilhad evit en em zifenn ouzh ar yenijenn
+dirapar: torret da-vat, kouezhet en o foull ha n'eus ket tu dresañ
+diwar herr: buan, gant tizh
+fritur: labouradeg lec'h ma vez lakaet ar pesked e boestoù-mir
+fronelloù: toulloù fri
+hilligañ: ober hilligoù, lakaat u.b. da c'hoarzhin en ur douchañ dindan an divrec'h...
+islonk: toull don-don ha ne vez ket gwelet ar foñs, er mor alies
+lugerniñ: sked ar gouloù
+stirlinkat: trouz a ra an alc'hwezhioù, ar c'herdin ouzh ar gwernioù
+skleur: sklerijenn vihan gwan, lodenn treuzwelus ur vi, babouz ar velc'hwedenn a chom war an hent pe dourenn a servij d'ar baotred da gas ar sper
+skrijañ: gant ar riv pe an aon
+tregerniñ: un trouz bras a grog a-daol-trumm (kleier, huchadenn...)
