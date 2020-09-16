@@ -1,3 +1,10 @@
+let geriou
+let enankou
+let ger
+let n_geriou_mat = 0;
+let enank = document.getElementById('enank');
+let holl_pe_nevez
+
 function print(s, klas) {
     var p = document.createElement('p');
     p.classList.add('message');
@@ -20,13 +27,6 @@ function get_data(url) {
 
 Promise.all( [ get_data('geriou_nevez.txt'),
                get_data('holl_geriou.txt') ]).then( ([geriou_nevez, holl_geriou]) => {
-                var geriou
-                var enankou
-                var ger
-                var n_geriou_mat = 0;
-                var enank = document.getElementById('enank');
-                var holl_pe_nevez
-
                 function ger_f(talvoud) {
                     if (talvoud.toLowerCase() === ger[1].toLowerCase()) {
                         n_geriou_mat = n_geriou_mat + 1;
@@ -36,7 +36,19 @@ Promise.all( [ get_data('geriou_nevez.txt'),
                         print(talvoud, 'den');
                         print('Ket ! ' + ger[1] + ' eo.', "urzh");
                     }
-                    ger = enankou[Math.floor(Math.random() * enankou.length)];
+                    if (enankou.length > 0) {
+                        ger = enankou.pop();
+                    } else {
+                        geriou = new Map(holl_pe_nevez === "holl" ? [...geriou_nevez, ...holl_geriou] : geriou_nevez);
+                        enankou = Array.from(geriou.entries());
+                        for(let i = enankou.length - 1; i > 0; i--){
+                            const j = Math.floor(Math.random() * i)
+                            const temp = enankou[i]
+                            enankou[i] = enankou[j]
+                            enankou[j] = temp
+                        }
+                        ger = enankou.pop();
+                    }
                     print(ger[0], 'urzh');
                 }
 
@@ -60,7 +72,13 @@ Promise.all( [ get_data('geriou_nevez.txt'),
                             enank.value = '';
                             geriou = new Map(holl_pe_nevez === "holl" ? [...geriou_nevez, ...holl_geriou] : geriou_nevez);
                             enankou = Array.from(geriou.entries());
-                            ger = enankou[Math.floor(Math.random() * enankou.length)];
+                            for(let i = enankou.length - 1; i > 0; i--){
+                                const j = Math.floor(Math.random() * i)
+                                const temp = enankou[i]
+                                enankou[i] = enankou[j]
+                                enankou[j] = temp
+                            }
+                            ger = enankou.pop();
                             print(ger[0], 'urzh'); //urzh evit urzhiataer
                         } else {
                             var talvoud = enank.value;
