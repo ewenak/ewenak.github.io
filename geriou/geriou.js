@@ -43,8 +43,20 @@ Promise.all( [ get_data('geriou_nevez.txt'),
                 enank.addEventListener('keyup', e => {
                     if (e.key === 'Enter') {
                         if (typeof holl_pe_nevez === "undefined"){
-                            holl_pe_nevez = enank.value === '1' ? 'holl' : 'nevez';
                             print(enank.value, 'den');
+                            switch (enank.value) {
+                                case '1':
+                                    holl_pe_nevez = 'holl';
+                                    break
+                                case '2':
+                                    holl_pe_nevez = 'nevez';
+                                    break
+                                default:
+                                    print('Skrivit 1 pe 2', 'urzh');
+                                    print("C'hoant peus deskiñ 1) an holl gerioù pe 2) nemet ar re nevez ?", 'urzh');
+                                    enank.value = '';
+                                    return;
+                            }
                             enank.value = '';
                             geriou = new Map(holl_pe_nevez === "holl" ? [...geriou_nevez, ...holl_geriou] : geriou_nevez);
                             enankou = Array.from(geriou.entries());
