@@ -125,3 +125,25 @@ stirlinkat: trouz a ra an alc'hwezhioù, ar c'herdin ouzh ar gwernioù
 skleur: sklerijenn vihan gwan, lodenn treuzwelus ur vi, babouz ar velc'hwedenn a chom war an hent pe dourenn a servij d'ar baotred da gas ar sper
 skrijañ: gant ar riv pe an aon
 tregerniñ: un trouz bras a grog a-daol-trumm (kleier, huchadenn...)
+Anien: Hollad ar perzhioù heverk
+Argarzhiñ: kaout kasoni ouzh unan bennak
+Aheurterez: obererezh chom war e soñj, pennegezh
+Diarvar: hep mar ebet pe e surentez
+Dinoaz: n'eo ket drouk
+Dizellezek: n'eo ket e-tailh da gaout un dra bennak peogwir n'hor bez ket strivet a-walc'h
+Dasson: Heklev, kendalc'h un trouz
+Diastal: hep astal, hep ehan, dibaouez
+Dejanal: ober goap
+E piaoù: e dalc'h unan bennak ; a zo gant unan bennak
+heñvel-poch: heñvel-mik
+Linkr: riklus
+Mantret: bec'hiet e spered gant tristidigezh vras. Dipitet-kenañ.
+Mennad: ar pezh oc'h mennet d'ober
+Mestaol: taol skoet gant ar c'hoant d'ober droug
+Morc'hed: kaout keuz bras, kerse bras hag glac'haret
+Mastaret: saotret, louzet
+Neudennig: un tamm fiselenn pe un tamm neud hir pe hiroc'h pe "un tammig a ..."
+Prederour: den a bleustr war ar brederouriezh
+Puchañ: azezañ war e seulioù hep ma vefe an daoulin war al leur, kluchañ
+Skiant-vat: Galloudegezh an den d'ober pe prederiañ war un dra / barnañ gant poell
+Torfed: Felladenn c'hrevus / ober a sav a-enep al lezenn
